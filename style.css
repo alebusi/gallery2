@@ -23,7 +23,7 @@ path {
 }
 
 path:hover {
-    animation: draw 14s ease infinite alternate;
+    animation: draw 16s ease infinite alternate;
     fill: transparent;
     cursor: none;
   	stroke-dasharray: 700;
