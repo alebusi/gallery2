@@ -3,9 +3,6 @@ html, body {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #1d1e22;
 }
 
