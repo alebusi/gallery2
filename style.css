@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-  background-color: yellow; /*#1d1e22;*/
+  background-color: #1d1e22;
 }
 
 svg {
@@ -22,7 +22,7 @@ path {
     stroke-width: 2;
 }
 
-path:hover {
+svg:hover path {
     animation: draw 16s ease infinite alternate;
     fill: transparent;
     cursor: none;
