@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+svg {
+    display: inline-block;
+    background-color: black;
+    margin: 20 px;
+    height: 300px;
+}
+
+path {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 2;
+}
+
+path:hover {
+    animation: draw 14s ease infinite alternate;
+    fill: transparent;
+    cursor: none;
+  	stroke-dasharray: 700;
+}
+
+@keyframes draw {
+			0%,10% { 
+				stroke-dashoffset: 700;
+			}
+
+			100% { 
+				stroke-dashoffset: 0;
+			}
+		}
