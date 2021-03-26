@@ -19,7 +19,7 @@ path {
     stroke-width: 2;
 }
 
-path:hover {
+svg:hover path {
     animation: draw 16s ease infinite alternate;
     fill: transparent;
     cursor: none;
