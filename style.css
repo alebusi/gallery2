@@ -12,8 +12,8 @@ body {
 svg {
     display: inline-block;
     background-color: black;
-    margin: 20px;
-    height: 300px;
+    margin: 60px;
+    height: 260px;
 }
 
 path {
