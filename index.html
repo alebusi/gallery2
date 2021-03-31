@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>Gallery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <title>Gallery</title>
+  <link rel="stylesheet" href="style.css">
+    
+  <script Language="Javascript">
+    function CambiaStile(sheet) {
+        if (document.getElementById('pagestyle').getAttribute('href')=="style.css") {
+           document.getElementById('pagestyle').setAttribute("href",sheet);
+        }
+  </script>  
 </head>
 <body>
  <!--  ROEBI-->
@@ -99,6 +106,6 @@ m5 0 v-40
 <!--  VIETATO -->
 <svg viewBox="0 0 100 100"> <path d="M20 20 l30 30 M80 20 l-30 30 M20 80 l30 -30 M80 80 l-30 -30 M50 0 q50 0 50 50 t-50 50 t-50 -50 t50 -50" /></svg>>
 
-
+<div id="tastoColoreMattone" onclick="CambiaStile('style2.css')"></div>
 </body>
 </html>
