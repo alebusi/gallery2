@@ -30,11 +30,31 @@ svg:hover path {
 }
 
 @keyframes draw {
-			0%,10% { 
-				stroke-dashoffset: 700;
-			}
+    0%,10% {stroke-dashoffset: 700;}
+    100%   {stroke-dashoffset: 0;}
+}
 
-			100% { 
-				stroke-dashoffset: 0;
-			}
-		}
+#specchietto {
+    display: fixed;
+    background-color: black;
+    padding: 10vw;
+    height: 80vw;
+    left: 90vw;
+    color: white;
+}
+
+#specchietto:hover {
+    left: 60vw;
+}
+
+.etichetta {
+    font-size: 24px;
+}
+
+.campione {
+  font-size: 64px;
+  height: 80px;
+  width: 20vw;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
