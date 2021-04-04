@@ -35,7 +35,7 @@ svg:hover path {
 }
 
 #specchietto {
-    display: fixed;
+    position: fixed;
     background-color: black;
     padding: 10vw;
     height: 80vw;
