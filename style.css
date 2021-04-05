@@ -34,7 +34,7 @@ svg:hover path {
     100%   {stroke-dashoffset: 0;}
 }
 
-.specchietto_cl {
+#specchietto {
     position: fixed;
     background-color: black;
     padding: 10vw;
@@ -42,7 +42,7 @@ svg:hover path {
     left: 90vw;
     color: white;
 }
-
+/*
 .specchietto_cl:hover {
     left: 60vw;
     animation: mymoveSelection 2s;
@@ -52,7 +52,7 @@ svg:hover path {
   0%   {background-color: orange;}
   100% {background-color: black;}
 }
-
+*/
 .etichetta {
     font-size: 24px;
 }
