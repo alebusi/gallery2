@@ -8,12 +8,22 @@
   <script Language="Javascript">
     var fogli = ["style.css","style2.css","style3.css"];
     var ind=0;
+    vm=false;
     function CambiaStile() {
        ind+=1;
        if (ind > 2) i=0;
        document.getElementById('pagestyle').setAttribute("href",fogli[ind]);
     }
-
+    function attivaMenu() {
+       if (vm) {
+         document.getElementById("specchietto").style.left = "60vw";
+         vm=true;
+       }
+        else {
+          document.getElementById("specchietto").style.left = "90vw";
+          vm=false;
+        }
+    }
   </script>  
 </head>
 <body>
