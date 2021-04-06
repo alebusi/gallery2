@@ -9,6 +9,7 @@
     var colori = ["white","#FF3300","orange","#4285F4","#0F9D58","black"];
     var ind_r=0;
     var ind_t=0;
+    var peso = [0,1,2,4,8,16];
     var ind_p=0;
     
     var fogli = ["style.css","style2.css","style3.css"];
@@ -52,11 +53,11 @@
     function cambioPeso(div) {
      ind_p+=1;
      if (ind_p > peso.length-1) ind_p=0;
-     div.style.backgroundColor = peso[ind_p];
+     div.innerHTML = peso[ind_p];
      var x = document.getElementsByTagName("path");
      var i;
      for (i = 0; i < x.length; i++) {
-       x[i].style.strokeWidth = colori[ind_p];
+       x[i].style.strokeWidth = peso[ind_p];
      }
     }
     function cambioLinea(div) {
