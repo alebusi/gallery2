@@ -42,8 +42,8 @@ svg:hover path {
     left: 90vw;
     color: white;
 }
-/*
-.specchietto_cl:hover {
+
+#specchietto:hover {
     left: 60vw;
     animation: mymoveSelection 2s;
 }
