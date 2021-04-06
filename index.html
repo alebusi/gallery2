@@ -45,7 +45,7 @@
     }
     function cambioTraccia(div) {
      ind_t+=1;
-     if (ind_t > colori.length-1) ind_r=0;
+     if (ind_t > colori.length-1) ind_t=0;
      div.style.backgroundColor = colori[ind_t];
      var x = document.getElementsByTagName("path");
      for (i = 0; i < x.length; i++) {
