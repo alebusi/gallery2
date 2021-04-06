@@ -28,10 +28,10 @@
           vm=false;
         }
     }
-    function cambioRiempimento(div) {
+    function cambioRiempimento() {
      ind_r+=1;
      if (ind_r > colori.length-1) ind_r=0;
-     div.style.backgroundColor=[ind_r];
+     this.style.backgroundColor=[ind_r];
      var x = document.getElementsByTagName("path");
      var i;
      for (i = 0; i < x.length; i++) {
