@@ -28,9 +28,10 @@
           vm=false;
         }
     }
-    function cambioRiempimento() {
+    function cambioRiempimento(div) {
      ind_r+=1;
      if (ind_r > colori.length-1) ind_r=0;
+     div.style.backgroundColor=[ind_r];
      var x = document.getElementsByTagName("path");
      var i;
      for (i = 0; i < x.length; i++) {
@@ -54,7 +55,7 @@
  <div id="specchietto">
 
   <div class="etichetta">Fill</div>
-  <div class="campione" onclick="cambioRiempimento()"></div>
+  <div class="campione" onclick="cambioRiempimento(this)"></div>
 
   <div class="etichetta">Stroke</div>
   <div class="campione" onclick="cambioTraccia()"></div>
