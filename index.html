@@ -6,6 +6,10 @@
   <link rel="stylesheet" href="style.css">
     
   <script Language="Javascript">
+    var colori = ["white","#FF3300","orange","#4285F4","#0F9D58","black"];
+    var ind_r=0;
+    var ind_t=0;
+    
     var fogli = ["style.css","style2.css","style3.css"];
     var ind=0;
     vm=false;
@@ -24,6 +28,25 @@
           vm=false;
         }
     }
+    function cambioRiempimento() {
+     ind_r+=1;
+     if (ind_r > dimensioni.length-1) ind_r=0;
+     var x = document.getElementsByTagName("path");
+     var i;
+     for (i = 0; i < x.length; i++) {
+       x[i].style.fill = colori[ind_r];
+     }
+    }
+    function cambioTraccia() {
+     ind_t+=1;
+     if (ind_t > dimensioni.length-1) ind_r=0;
+     var x = document.getElementsByTagName("path");
+     var i;
+     for (i = 0; i < x.length; i++) {
+       x[i].style.stroke = colori[ind_t];
+     }
+    }
+
   </script>  
 </head>
 <body>
