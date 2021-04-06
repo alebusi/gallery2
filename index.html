@@ -16,24 +16,6 @@
     var dimensione = ["260px","320px","400px","520px"];
     var ind_d=0;
     
-    var fogli = ["style.css","style2.css","style3.css"];
-    var ind=0;
-    vm=false;
-    function CambiaStile() {
-       ind+=1;
-       if (ind > 2) i=0;
-       document.getElementById('pagestyle').setAttribute("href",fogli[ind]);
-    }
-    function attivaMenu() {
-       if (vm === false) {
-         document.getElementById("specchietto").style.left = "60vw";
-         vm=true;
-       }
-        else {
-          document.getElementById("specchietto").style.left = "90vw";
-          vm=false;
-        }
-    }
     function cambioRiempimento(div) {
      ind_r+=1;
      if (ind_r > colori.length-1) ind_r=0;
