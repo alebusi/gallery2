@@ -45,14 +45,8 @@ svg:hover path {
 
 #specchietto:hover {
     left: 60vw;
-    animation: mymoveSelection 2s;
 }
 
-@keyframes mymoveSelection {
-  0%   {background-color: orange;}
-  100% {background-color: black;}
-}
-*/
 .etichetta {
     font-size: 24px;
 }
