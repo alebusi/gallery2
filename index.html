@@ -11,6 +11,10 @@
     var ind_t=0;
     var peso = [0,1,2,4,8,16];
     var ind_p=0;
+    var linea = [700,100,50,16,8,4];
+    var ind_l=0;
+    var dimensione = ["260px","320px","400px","520px","700px"];
+    var ind_d=0;
     
     var fogli = ["style.css","style2.css","style3.css"];
     var ind=0;
@@ -35,7 +39,6 @@
      if (ind_r > colori.length-1) ind_r=0;
      div.style.backgroundColor = colori[ind_r];
      var x = document.getElementsByTagName("path");
-     var i;
      for (i = 0; i < x.length; i++) {
        x[i].style.fill = colori[ind_r];
      }
@@ -45,7 +48,6 @@
      if (ind_t > colori.length-1) ind_r=0;
      div.style.backgroundColor = colori[ind_t];
      var x = document.getElementsByTagName("path");
-     var i;
      for (i = 0; i < x.length; i++) {
        x[i].style.stroke = colori[ind_t];
      }
@@ -55,19 +57,26 @@
      if (ind_p > peso.length-1) ind_p=0;
      div.innerHTML = peso[ind_p];
      var x = document.getElementsByTagName("path");
-     var i;
      for (i = 0; i < x.length; i++) {
        x[i].style.strokeWidth = peso[ind_p];
      }
     }
     function cambioLinea(div) {
-     ind_t+=1;
-     if (ind_t > colori.length-1) ind_r=0;
-     div.style.backgroundColor = colori[ind_t];
+     ind_l+=1;
+     if (ind_l > linea.length-1) ind_l=0;
+     div.innerHTML = linea[ind_l];
      var x = document.getElementsByTagName("path");
-     var i;
      for (i = 0; i < x.length; i++) {
-       x[i].style.stroke = colori[ind_t];
+       x[i].style.strokeDashArray = linea[ind_l];
+     }
+    }
+    function cambioDimensione(div) {
+     ind_d+=1;
+     if (ind_d > dimensione.length-1) ind_d=0;
+     div.innerHTML = dimensione[ind_d];
+     var x = document.getElementsByTagName("svg");
+     for (i = 0; i < x.length; i++) {
+       x[i].style.height = dimensione[ind_d];
      }
     }
 
