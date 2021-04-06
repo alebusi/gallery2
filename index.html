@@ -9,6 +9,7 @@
     var colori = ["white","#FF3300","orange","#4285F4","#0F9D58","black"];
     var ind_r=0;
     var ind_t=0;
+    var ind_p=0;
     
     var fogli = ["style.css","style2.css","style3.css"];
     var ind=0;
@@ -28,19 +29,40 @@
           vm=false;
         }
     }
-    function cambioRiempimento() {
+    function cambioRiempimento(div) {
      ind_r+=1;
      if (ind_r > colori.length-1) ind_r=0;
-     this.style.backgroundColor=[ind_r];
+     div.style.backgroundColor = colori[ind_r];
      var x = document.getElementsByTagName("path");
      var i;
      for (i = 0; i < x.length; i++) {
        x[i].style.fill = colori[ind_r];
      }
     }
-    function cambioTraccia() {
+    function cambioTraccia(div) {
      ind_t+=1;
      if (ind_t > colori.length-1) ind_r=0;
+     div.style.backgroundColor = colori[ind_t];
+     var x = document.getElementsByTagName("path");
+     var i;
+     for (i = 0; i < x.length; i++) {
+       x[i].style.stroke = colori[ind_t];
+     }
+    }
+    function cambioPeso(div) {
+     ind_p+=1;
+     if (ind_p > peso.length-1) ind_p=0;
+     div.style.backgroundColor = peso[ind_p];
+     var x = document.getElementsByTagName("path");
+     var i;
+     for (i = 0; i < x.length; i++) {
+       x[i].style.strokeWidth = colori[ind_p];
+     }
+    }
+    function cambioLinea(div) {
+     ind_t+=1;
+     if (ind_t > colori.length-1) ind_r=0;
+     div.style.backgroundColor = colori[ind_t];
      var x = document.getElementsByTagName("path");
      var i;
      for (i = 0; i < x.length; i++) {
@@ -58,16 +80,16 @@
   <div class="campione" onclick="cambioRiempimento(this)"></div>
 
   <div class="etichetta">Stroke</div>
-  <div class="campione" onclick="cambioTraccia()"></div>
+  <div class="campione" onclick="cambioTraccia(this)"></div>
 
   <div class="etichetta">Weight</div>
-  <div class="campione" onclick="cambioPeso()"></div>
+  <div class="campione" onclick="cambioPeso(this)"></div>
 
   <div class="etichetta">Dash</div>
-  <div class="campione" onclick="cambioLinea()"></div>
+  <div class="campione" onclick="cambioLinea(this)"></div>
 
   <div class="etichetta">Height</div>
-  <div class="campione" onclick="cambioDimensione()"></div>
+  <div class="campione" onclick="cambioDimensione(this)"></div>
 
 </div>
 
