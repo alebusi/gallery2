@@ -17,6 +17,8 @@
     var dimensione = ["260px","320px","400px","520px"];
     var ind_d=0;
     
+    svg.onclick = function(){myFunc()};
+    
     function cambioRiempimento(div) {
      ind_r+=1;
      if (ind_r > colori.length-1) ind_r=0;
