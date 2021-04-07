@@ -17,6 +17,14 @@
     var dimensione = ["260px","320px","400px","520px"];
     var ind_d=0;
     
+    // select elements
+var elements = Array.from(document.querySelectorAll('svg'));
+
+// add event listeners
+elements.forEach(function(el) {
+   el.addEventListener("click", myFunc);
+})
+    
     function cambioRiempimento(div) {
      ind_r+=1;
      if (ind_r > colori.length-1) ind_r=0;
