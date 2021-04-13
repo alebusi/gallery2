@@ -16,6 +16,8 @@
     var ind_l=0;
     var dimensione = ["260px","320px","400px","520px"];
     var ind_d=0;
+    var durata = ["8s","16s","24s","32s"];
+    var ind_dur = 1;
     
     // select elements
     //var elements = Array.from(document.querySelectorAll('svg'));
@@ -70,6 +72,15 @@
        x[i].style.height = dimensione[ind_d];
      }
     }
+    function cambioDurata(div) {
+      ind_dur+=1;
+      if (ind_dur > durata.length-1) ind_dur=0;
+      div.innerHTML = durata[ind_dur];
+      var x = document.getElementsByTagName("path");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.animationDuration = durata[ind_dur];
+      }
+    }
     function myFunc() {
       a=1;
     }
@@ -94,6 +105,9 @@
 
   <div class="etichetta">Height</div>
   <div class="campione" onclick="cambioDimensione(this)">260px</div>
+   
+  <div class="etichetta">Time</div>
+  <div class="campione" onclick="cambioDurata(this)">16s</div>
 
 </div>
 
